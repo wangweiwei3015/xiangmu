@@ -1,0 +1,11 @@
+﻿$(function () {
+    var loginState = $("#loginState");
+    $.ajax({
+        type: "POST",
+        url: "/Common/LoginState.ashx?r=" + Math.random(),
+        async: false,
+        success: function (msg) {
+            loginState.html(msg);
+        }
+    });
+});
